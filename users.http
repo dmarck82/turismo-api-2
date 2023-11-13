@@ -1,0 +1,32 @@
+@URL=http://localhost:3001/users
+
+### Obter todos
+GET {{ URL  }}
+
+### Criar usuário
+POST {{ URL }}
+Content-Type: application/json
+
+{
+    "name": "Douglas",
+    "email": "Douglas@email.com",
+    "password": "medianeira123",
+    "phone": "45999999999"
+}
+
+### Obter por id
+GET {{ URL  }}/6552a000c3be80ff9f9f9275
+
+### Deletar por id
+DELETE {{ URL }}/651d9d462f4d904a0057c91e
+
+### Atualizar por id
+PUT {{URL}}/6552a000c3be80ff9f9f9275
+Content-Type: application/json
+
+{
+    "name": "Douglas Marcondes",
+    "email": "douglas@email.com",
+    "password": "medianeira123",
+    "phone": "45999999999"
+}

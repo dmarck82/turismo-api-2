@@ -1,0 +1,32 @@
+@URL=http://localhost:3001/avaliacao
+
+### Obter todos
+GET {{ URL  }}
+ 
+### Criar avaliacao
+POST {{ URL }}
+Content-Type: application/json
+
+{
+  "pessoa": { "id": "6552aa5b9e602ce2ec9d8c44", "nome": "Igor" },
+  "passeioId": 5,
+  "comentario": "Gostei demais",
+  "nota": 5
+}
+
+### Obter por id
+GET {{ URL  }}/6552a784e86c3b5e94a39c3d
+
+### Deletar por id
+DELETE {{URL}}/6552ad86ce0b8c53ada36dc4
+
+### Atualizar por id
+PUT {{URL}}/6552a7dce86c3b5e94a39c42
+Content-Type: application/json
+
+{
+  "pessoa": { "id": "6552a000c3be80ff9f9f9275", "nome": "Douglas" },
+  "passeioId": 2,
+  "comentario": "O passeio foi top",
+  "nota": 2
+}
